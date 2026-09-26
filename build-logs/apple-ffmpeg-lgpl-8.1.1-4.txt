@@ -1,0 +1,12 @@
+Musiver Apple FFmpeg LGPL build
+
+Source: https://ffmpeg.org/releases/ffmpeg-8.1.1.tar.xz
+Source SHA-256: b6863adde98898f42602017462871b5f6333e65aec803fdd7a6308639c52edf3
+Build revision: 4
+Host: macOS 26.4 arm64
+Xcode: 26.4, clang 21
+Configure flags: see recipes/apple-ffmpeg-lgpl-8.1.1.json
+Artifact: apple-ffmpeg-lgpl-8.1.1-4.zip
+Artifact SHA-256: 907dfc68f99d9f503bee8d7cf785cd3d1efaa8c21c3027562ef2b7fcf7663987
+
+The archive includes the FFmpeg LGPL text and build-info.json. GPL and nonfree options are disabled by the recipe.
