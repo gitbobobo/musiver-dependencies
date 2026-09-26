@@ -1,11 +1,5 @@
-# Build recipes
+# Recipes
 
-Platform recipes will be added here before their corresponding release assets:
+Each JSON recipe records the public source URL and SHA-256, exact configure flags, artifact name and digest, license files, and the command used to build the archive. A release asset is immutable: publish a new `v*` release when any field or build input changes.
 
-- `ffmpeg-apple`: LGPL-only FFmpeg 8.1.1 XCFrameworks for iOS, macOS, and tvOS.
-- `ffmpeg-android`: LGPL-only FFmpeg 8.1.1 ABI libraries.
-- `ffmpeg-ohos`: LGPL-only FFmpeg 8.1.1 OpenHarmony ABI libraries.
-- `mpv-linux`: LGPL-only libmpv built with mpv-build.
-- `mpv-macos`: LGPL-only libmpv runtime.
-
-Each recipe must record the public source URL, source SHA-256, exact configure flags, target ABI, compiler/toolchain versions, and license files.
+The Apple FFmpeg recipe is currently published as `apple-ffmpeg-lgpl-8.1.1-4.zip`. Its archive contains only LGPL FFmpeg libraries and the corresponding license/build metadata.

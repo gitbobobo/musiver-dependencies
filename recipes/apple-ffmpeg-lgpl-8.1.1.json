@@ -1,0 +1,34 @@
+{
+  "name": "apple-ffmpeg-lgpl-8.1.1-4",
+  "kind": "native-archive",
+  "target": "apple",
+  "version": "8.1.1",
+  "build_revision": "4",
+  "source": {
+    "url": "https://ffmpeg.org/releases/ffmpeg-8.1.1.tar.xz",
+    "sha256": "b6863adde98898f42602017462871b5f6333e65aec803fdd7a6308639c52edf3"
+  },
+  "configure_flags": [
+    "--disable-gpl",
+    "--disable-nonfree",
+    "--enable-securetransport",
+    "--disable-programs",
+    "--disable-doc",
+    "--disable-debug",
+    "--disable-x86asm",
+    "--disable-inline-asm",
+    "--disable-avdevice",
+    "--disable-avfilter",
+    "--disable-swscale",
+    "--disable-xlib",
+    "--enable-shared",
+    "--disable-static"
+  ],
+  "artifact": {
+    "file_name": "apple-ffmpeg-lgpl-8.1.1-4.zip",
+    "sha256": "907dfc68f99d9f503bee8d7cf785cd3d1efaa8c21c3027562ef2b7fcf7663987"
+  },
+  "license_files": ["ffmpeg-LICENSE.md", "LGPL-2.1-or-later.txt"],
+  "built_on": "macOS 26.4 arm64, Xcode 26.4, clang 21",
+  "build_command": "MUSIVER_FFMPEG_SKIP_BOOTSTRAP=1 pnpm build ffmpeg apple"
+}
