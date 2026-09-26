@@ -76,7 +76,11 @@ jobs:
         run: |
           set -euo pipefail
           test -f README.md
-          if [ -n "$ASSET_NAME" ]; then
+          if gh release view "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            if [ -n "$ASSET_NAME" ]; then
+              gh release upload "$RELEASE_TAG" "$ASSET_NAME" --repo "$GITHUB_REPOSITORY" --clobber
+            fi
+          elif [ -n "$ASSET_NAME" ]; then
             gh release create "$RELEASE_TAG" "$ASSET_NAME" --repo "$GITHUB_REPOSITORY" --title "Musiver dependencies $RELEASE_TAG" --notes-file README.md --verify-tag
           else
             gh release create "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" --title "Musiver dependencies $RELEASE_TAG" --notes-file README.md --verify-tag
