@@ -1,0 +1,14 @@
+Musiver Android FFmpeg LGPL build
+
+Source: https://ffmpeg.org/releases/ffmpeg-8.1.1.tar.xz
+Source SHA-256: b6863adde98898f42602017462871b5f6333e65aec803fdd7a6308639c52edf3
+Build revision: 1
+Host: macOS arm64
+Xcode: 16.2
+Android NDK: 29.0.14206865, API 26
+Configure flags: see recipes/android-ffmpeg-lgpl-8.1.1-1.json
+ABIs: arm64-v8a, armeabi-v7a, x86_64
+Artifact: android-ffmpeg-lgpl-8.1.1-1.zip
+Artifact SHA-256: 4519cd9e5d6da8fd4bc948e63238b3fd84b60fb7655de67d60dca30da4e3ada0
+
+The archive includes the FFmpeg LGPL text and per-ABI build-info.json. GPL and nonfree options are disabled by the recipe.

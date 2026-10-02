@@ -1,0 +1,39 @@
+{
+  "name": "android-ffmpeg-lgpl-8.1.1-1",
+  "kind": "native-archive",
+  "target": "android",
+  "version": "8.1.1",
+  "build_revision": "1",
+  "source": {
+    "url": "https://ffmpeg.org/releases/ffmpeg-8.1.1.tar.xz",
+    "sha256": "b6863adde98898f42602017462871b5f6333e65aec803fdd7a6308639c52edf3"
+  },
+  "configure_flags": [
+    "--disable-gpl",
+    "--disable-nonfree",
+    "--disable-programs",
+    "--disable-doc",
+    "--disable-debug",
+    "--disable-avdevice",
+    "--disable-avfilter",
+    "--disable-swscale",
+    "--disable-symver",
+    "--disable-x86asm",
+    "--enable-shared",
+    "--disable-static",
+    "--enable-jni",
+    "--enable-mediacodec"
+  ],
+  "android": {
+    "api": "26",
+    "abis": ["arm64-v8a", "armeabi-v7a", "x86_64"],
+    "ndk": "29.0.14206865"
+  },
+  "artifact": {
+    "file_name": "android-ffmpeg-lgpl-8.1.1-1.zip",
+    "sha256": "4519cd9e5d6da8fd4bc948e63238b3fd84b60fb7655de67d60dca30da4e3ada0"
+  },
+  "license_files": ["ffmpeg-LICENSE.md", "COPYING.LGPLv2.1", "COPYING.LGPLv3"],
+  "built_on": "macOS arm64, Xcode 16.2, Android NDK 29.0.14206865, clang 21",
+  "build_command": "pnpm build ffmpeg android"
+}
